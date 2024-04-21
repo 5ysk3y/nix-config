@@ -1,4 +1,4 @@
-{ config, lib, pkgs, vars, inputs, ... }:
+{ config, lib, pkgs, inputs, hostname, ... }:
 
 {
 
@@ -126,7 +126,7 @@
 
           $HYPRLAND_CONFIG_PATH = /home/rickie/.config/hypr
 
-          source = ${config.home.homeDirectory}/nix-config/hosts/${vars.hostname}/applications/hypr/hyprland.conf
+          source = ${nixos-config}/hosts/${hostname}/applications/hypr/hyprland.conf
            '';
 
       };
